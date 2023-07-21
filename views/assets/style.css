@@ -1,0 +1,212 @@
+/* style.css */
+
+/* Set the primary background color */
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 5px solid #707070;
+  box-sizing: border-box; 
+
+  background: linear-gradient(45deg, #00adb5, #6a0572, #00adb5, #6a0572);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Mobile-first styles for the containers */
+.container,
+.task-list-container {
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Tablet and larger screen styles */
+@media (min-width: 768px) {
+  .container,
+  .task-list-container {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+}
+
+/* Larger desktop screen styles */
+@media (min-width: 1200px) {
+  .container,
+  .task-list-container {
+    max-width: 900px;
+    margin: 40px auto;
+  }
+}
+
+/* Center the container */
+.container {
+  background-color: #3333331a;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.525);
+}
+
+/* Add some spacing between rows */
+.table tbody tr:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* Style the input fields */
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3333332d;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Style the Add Task button */
+#add {
+  background-color: #0ff4e95e;
+  border: none;
+  border-radius: 5px;
+  color: #282727;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+#add:hover {
+  box-shadow: 0 0 10px #000000;
+}
+
+/* Style the Delete Task button */
+.btn-danger {
+  background-color: #ff4646;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Glow effect on hover */
+.btn-danger:hover {
+  box-shadow: 0 0 10px #000000;
+}
+
+/* Style the tasks list table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ffffff;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #707070;
+}
+
+/* Style the checkbox */
+[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+[type="checkbox"]:checked {
+  background-color: #00adb5;
+  border-color: #00adb5;
+}
+
+/* Style the task description */
+#task-description {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+/* Style the task category */
+#task-category {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 0.6rem;
+  color: #ffffff;
+  background-color: #6a0572;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Style the due date */
+#due-date {
+  display: block;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Separate container for the task list */
+.task-list-container {
+  background-color: #4d4d4d00;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+/* Style the task list table */
+.task-list-container table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ffffff;
+}
+
+.task-list-container th,
+.task-list-container td {
+  padding: 10px;
+  border-bottom: 1px solid #707070;
+}
+
+/* Style the task description */
+.task-list-container #task-description {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+/* Style the task category */
+.task-list-container #task-category {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 0.6rem;
+  color: #ffffff;
+  background-color: #6a0572;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Style the due date */
+.task-list-container #due-date {
+  display: block;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
